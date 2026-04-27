@@ -1,0 +1,4 @@
+# Claude bot is a required reviewer on every pull request.
+# Requires the Claude GitHub App to be installed on this repo:
+# https://github.com/apps/claude
+* @claude[bot]
