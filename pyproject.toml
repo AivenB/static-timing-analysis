@@ -1,0 +1,40 @@
+[project]
+name = "static-timing-analysis"
+version = "0.1.0"
+description = "CLI tool for parsing and analyzing Static Timing Analysis reports from EDA workflows"
+readme = "README.md"
+authors = [
+    { name = "AivenB" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+sta = "static_timing_analysis.cli:main"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.0",
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.9",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--tb=short"
+
+[tool.ruff]
+src = ["src"]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+strict = true
+files = ["src"]
+
+[build-system]
+requires = ["uv_build>=0.9.13,<0.10.0"]
+build-backend = "uv_build"
