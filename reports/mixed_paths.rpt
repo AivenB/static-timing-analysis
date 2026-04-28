@@ -25,7 +25,7 @@ Path Type: max
     Delay      Time   Description
 -------------------------------------------------------------
     0.000    0.000    clock clk (rise edge)
-             12.000   data arrival 
+             12.000   data arrival time
 
     0.000    0.000    clock clk (rise edge)
              10.000   data required time
